@@ -1,0 +1,129 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* VARIABLES */
+:root{
+     /* colores */
+  --amarillo: #eac926;
+  --azul: #03264c;
+  --celeste: #1259c3;
+  --gris-oscuro: #666;
+  --gris-claro: #ebebeb;
+  --verde: #39b54a;
+  --negro: #000000;
+  --blanco: #ffffff;
+  --azul-claro: rgba(13, 197, 243, 0.5);
+  --rojo:#ED1C24;
+
+
+    /* TAMAÑO FUNETES */
+    --text-sm: 1em;
+    --text-md: 1.6em;
+    --text-lg: 1.8em;
+    --title-md: 2.4em;
+    /* FAMILIA DE FUENTES */
+    --roboto: "Roboto", sans-serif;
+}
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-image: url('/images/back.jpg');
+    
+}  
+.container{
+    background-image: url('/images/images.jpg');
+    background-repeat: repeat;
+    color: var(--negro);
+    display: flex;
+    margin: 2rem auto;
+    padding: 1rem;
+    border: 1px solid var(--azul);
+    gap: 14rem;
+   flex-wrap: wrap;
+   width: 50%;
+   justify-content:center;
+   
+   
+}
+h1{
+    text-align: center;
+    background-color: var(--amarillo);
+    border-radius: 6px
+} 
+.button{
+    display:flex;
+    justify-content: center;
+    align-items: center;   
+    gap: 1px;
+}
+.edit{
+    color: var(--verde)
+}
+.delete{
+    color: var(--rojo)
+}
+form{
+    margin: 0 auto ;
+    text-align: center;
+    font-size: 1rem;
+}
+section{
+    display:flex;
+    justify-content: center;
+    align-items: center;   
+    gap: 1px;
+    border: 5px  ;
+    padding:1px;
+    
+}
+ul{
+    list-style: none;
+    text-align: center
+}
+
+button{
+    background-color: var(--amarillo);
+    font-size: 1.5em;
+    border-radius: 8px ;
+}
+a{
+    text-decoration:none;
+    color: var(--negro)
+}
+.table{
+    width: 100%;
+    background-color: var(--blanco);
+}
+table,td,th{
+    border:1px solid ;
+    gap:1px
+}
+
+
+article{
+    background-color: var(--blanco); 
+    width: 33%;
+    margin: 4rem auto;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid;
+}
+
+@media (min-width: 1546px){
+    .container {
+        background-image: url(/images/images.jpg);
+        background-repeat: repeat;
+        color: var(--negro);
+        display: flex;
+        margin: 2rem auto;
+        padding: 1rem;
+        border: 1px solid var(--azul);
+        gap: 15rem;
+        flex-wrap: wrap;
+        width: 40%;
+        justify-content: center;
+    }
+  
+  }

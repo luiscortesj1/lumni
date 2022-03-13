@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevo auto</title>
+    <link rel='stylesheet' href='/css/style.css' />
+</head>
+
+<body>
+    <section id="formulario" >
+        <article >
+            <form action="/admin/autos/update/<%=auto.id%>?_method=PUT" method="POST">
+                <label for="title">Nombre </label>
+                <p><input type="text" name="nombre" id=""  value="<%= auto.nombre%>"required ></p>
+                <label for="tiempo">Tiempo</label>
+                <p><input type="number" name="tiempo" id="" value="<%= auto.tiempo%>" required></p>
+                <br>
+                <button class="botonAgregar" type="submit">Agregar</button>
+                <button><a  class="botonVolver" href="/admin/autos">Atras</a></button>
+            </form>
+        </article>
+    </section>
+    
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borrado de Auto</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    
+    <h1>¿Estas seguro que deseas borrar la marca: <%= auto.nombre %>?</h1>
+    <p>
+    
+        <form action="/admin/autos/delete/<%= auto.id %>?_method=DELETE" method="POST">
+            <br>
+            <p> <button class="botonBorrar" type="submit">Borrar</button>
+            
+            <button><a  class="botonVolver" href="/admin/autos">Atras</a></button></p>
+
+        </form>
+    
+    </p>
+    
+</body>
+
+</html>

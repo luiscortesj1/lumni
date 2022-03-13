@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/Astyle.css">
+    <title>Listado de Autos</title>
+    
+
+</head>
+
+<body>
+    <div class="container">
+    <h1>LISTADO DE AUTOS</h1>
+    <section>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Marca</th>
+                <th>Tiempo</th>
+                <th>Acciones</th>
+                
+            </tr>
+        <% for( let i = 0; i < autos.length; i++ ) { %>
+            <tr>
+                <th><%=autos[i].id%></th>
+                
+                <th><%=autos[i].nombre%></th>
+                <th><%=autos[i].tiempo%>-Horas</th>
+                <th><a class="edit" href="/admin/autos/edit/<%=autos[i].id %>"><i class="fas fa-edit"></i></a></th>
+                <th><a  class="delete"href="/admin/autos/delete/<%=autos[i].id %>""><i class="fas fa-trash-alt"></i></a></th>
+            
+            </tr>
+            <% } %>
+        </table>
+    </section>
+    <div class="button">
+        <button type="button"><a href="/admin/autos/new">Nuevo Auto</a></button>
+        <button type="button"><a href="/admin">Atras</a></button>
+    </div>
+    </ul>
+</div>
+</body>

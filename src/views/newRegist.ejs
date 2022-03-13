@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevo auto</title>
+    <link rel='stylesheet' href='/css/style.css' />
+</head>
+
+<body>
+    <section id="formulario" >
+        <article >
+            <form action="/admin/add" method="POST" enctype="multipart/form">
+                <label for="title">MARCA </label>
+                <p>
+                <select id="title" name="id_auto">
+                    <%for (var i = 0; i < auto.length; i++) { %>
+                    <option value="<%=auto[i].id%>"><%=auto[i].nombre %></option>
+                    <%}%>
+                </select>
+            </p>
+                <label for="cantidad">Cantidad</label>
+                <p><input type="number" name="cantidad" id="" required></p>
+                <label for="fecha">Fecha</label>
+                <p><input type="date" name="fecha" id></p>
+                <br>
+
+                <button class="botonAgregar" type="submit">Agregar</button>
+                <button><a  class="botonVolver" href="/admin">Atras</a></button>
+            </form>
+        </article>
+    </section>
+    
+</body>
+</html>

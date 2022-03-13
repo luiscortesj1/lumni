@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Listado de Produción</title>
+    
+
+</head>
+
+<body>
+    
+    <h1>LISTADO DE LISTADO DE PRODUCIÓN</h1>
+    <section>
+        <div class="container">
+        <table class="table">
+            <tr>
+                <th>ID</th>
+                <th>Vehiculo</th>
+                <th>Fabricacion</th>
+                <th>Unidades</th>
+                <th>Fecha</th>
+                
+            </tr>
+            <% for( let i = 0; i < registro.length; i++ ) { %>
+                <tr>
+                    <th><%=registro[i].id_registro%></th>
+                    
+                    <th><%=registro[i].autos.nombre%></th>
+                    <th><%=registro[i].autos.tiempo%>- Horas</th>
+                    <th><%=registro[i].cantidad%></th>
+                    <th><%=registro[i].fecha%></th>
+                    
+                    
+                
+                </tr>
+                <% } %>
+        </table>
+    </div>
+    </section>
+    <div class="button">
+        
+        <button type="button"><a href="/">Atras</a></button>
+    </div>
+</body>
